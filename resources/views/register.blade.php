@@ -51,37 +51,49 @@
   <br>
  <center> 
 	<form action='/register/save' method="post">
+    {{ csrf_field() }}
 	<table style="width:30%"class="table table-striped">
+
+    <!-- <tr>
+			<td style="width:40%">ID : </td>
+			<td><input class="form-control" type="text" name="id" width="500" placeholder="ID" required></td>
+		</tr> -->
+    
 		<tr>
 			<td style="width:40%">Name : </td>
-			<td><input class="form-control" type="text" name="name" width="500" placeholder="" required></td>
+			<td><input class="form-control" type="text" name="name" width="500" placeholder="NAME" required></td>
 		</tr>
 		<tr>
 			<td>Lastname : </td>
-			<td><input class="form-control" type="text" name="lastname" placeholder=""></td>
+			<td><input class="form-control" type="text" name="lastname" placeholder="LASTNAME"></td>
 		</tr>
 		<tr>
 			<td>E-mail : </td>
-			<td><input class="form-control" type="text" name="email" placeholder=""></td>
+			<td><input class="form-control" type="text" name="email" placeholder="E-MAIL"></td>
 		</tr>
 		<tr>
 			<td>Password : </td>
-			<td><input class="form-control" type="password" name="password" placeholder=""></td>
+			<td><input class="form-control" type="password" name="password" placeholder="PASSWORD"></td>
 		</tr>
-		<tr>
+		<!-- <tr>
 			<td>Confirm Password : </td>
 			<td><input class="form-control" type="password" name="" placeholder=""></td>
-		</tr>
+		</tr> -->
 	</table>	
   
-    <center>
-   <table>
-	<input class="btn" style="background-color:#2DB74D" type="submit" name="submit" value="Submit">
+  <center>
+  <table>
+    
+	 <input class="btn" style="background-color:#2DB74D" type="submit" name="submit" value="Submit">
   </form>  
-    <form action="/"><input style="margin-left:2%;background-color:#bbb"class="btn" type="submit" value="Back"></form>
-    </table>
-    </center>
-    </form>
+
+  <form action="/register">
+    <input style="margin-left:2%;background-color:#bbb" class="btn" type="submit" value="Back">
+  </form>
+
+  </table>
+  </center>
+  </form>
 
 
 </center>

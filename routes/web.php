@@ -35,3 +35,6 @@ Route::get('/exibition', function () {
 //REGISTER
 $router->post('/register/save','RegisterController@save');
 
+//EXIBITION
+$router->get('/exibition', 'ExibitionController@index');
+

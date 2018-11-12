@@ -2,17 +2,18 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
-class Participant extends Model
+class Participants extends Model
 {
+    // protected $table = 'participants';
     protected $primaryKey = 'regisNo';
     public $incrementing = false;
     
-    public function bookingHistory()
+    public function history()
     {
         return $this->hasMany('App\Models\History');
     }
     
-    public function enterExibition()
+    public function exibition()
     {
         return $this->belongsToMany('App\Models\Exibition');
     }

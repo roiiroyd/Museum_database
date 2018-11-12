@@ -39,6 +39,7 @@
 <br>
 <br>
 <br>
+
 <center>
 <table style="width:50%">
   <tr>
@@ -46,6 +47,14 @@
     <th>DATE</th> 
     <th>ENTER</th>
   </tr>
-    
+
+  @foreach ($posts as $post)
+  <tr>
+    <th>{{$post->name}}</th>
+    <th>{{$post->startDate}}</th> 
+    <th>{{$post->endDate}}</th>
+  </tr>
+  @endforeach
+
 </table>
 </center>

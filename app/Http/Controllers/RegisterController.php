@@ -2,31 +2,38 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\Models\participants;
+use Illuminate\http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
-class RegisterController extends BaseController
+
+class RegisterController extends Controller
 {
     public function save(Request $request)
-    {
-        $Participant = new Participant;
-        $student->name=$request->input('name');
-        $student->lastnameex=$request->input('lastname');
-        $student->email=$request->input('email');
-        $student->password=$request->input('password');
+    {   
+        $participants = new participants ;
+        $participants->regisNo=$request->input('id');
+        $participants->name=$request->input('name');
+        $participants->lastname=$request->input('lastname');
+        $participants->email=$request->input('email');
+        $participants->password=$request->input('password');
+        $participants->save();
         
-        if(empty($student->email)) {
+       
+        if(empty($participants->email)) {
             echo "<br><br><center><h3>Email Cannot be empty!</h3><br>
-            Adding Fail!<br>" ;	
+            Adding Fail!<br>" ; 
         }
         else{
-            $student->save(); 
+
+            $participants->save(); 
             echo "<br><br><center>Adding Success!";
+//
+            echo"<form action=\"/officers\">
+        <input type=\"submit\" value=\"Go To Officer\">
+        </form>";
         }
-        // echo"<form action=\"/bk/students/index\">
-        // <input type=\"submit\" value=\"Go To Students\">
-        // </form>";
+        
     }
 }

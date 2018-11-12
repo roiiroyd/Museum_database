@@ -14,14 +14,14 @@ class Participants extends Migration
     public function up()
     {
         Schema::create('participants', function (Blueprint $table) {
-            $table->integer('regisNo');
+            $table->increments('regisNo');
             $table->string('name');
             $table->string('lastname');
             $table->string('email')->uniqe();
             $table->string('password');
             $table->timestamps();
 
-            $table->primary('regisNo');
+            // $table->primary('regisNo');
 
             
 
