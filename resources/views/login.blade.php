@@ -52,19 +52,20 @@
 		<center>
 			<h1> Welcome </h1>
 			<table>
-				<form method="post" action="" enctype="multipart/form-data">
+				<form action="/login/save" method="post" >
+        @csrf
 					<tr>
-						<td>Username </td>
-						<td><input type="text" name="user" required /></td>
+						<td>email </td>
+						<td><input type="text" name="email" required /></td>
 					</tr>
 					<tr>
 						<td>Password</td>
-						<td><input type="password" name="pass" required /></td>
+						<td><input type="password" name="pwd" required /></td>
 					</tr>
 					</table><br/>
 					
-					<input type="submit" name="submit" value="login" href="index.php" />
-					<input type="reset">
+					<input type="submit" name="submit" value="login"  />
+					<!-- <input type="reset"> -->
           <br>
           <br>
           <a href="/regis">register</p>

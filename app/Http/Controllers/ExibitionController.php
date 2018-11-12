@@ -18,7 +18,6 @@ class ExibitionController extends Controller
         return view('exibition', [
           'count' => $count,
           'posts' => $posts
-    
         ]);
     }
 
@@ -32,5 +31,6 @@ class ExibitionController extends Controller
         </form>";
     }
 
+    
 
 }

@@ -39,3 +39,6 @@ $router->post('/register/save','RegisterController@save');
 $router->get('/exibition', 'ExibitionController@index');
 $router->get('/exibition/{id}/delete','ExibitionController@delete');
 
+//LOGIN
+$router->get('/login', 'LoginController@setlogin');
+$router->post('/login/save','LoginController@loginresult');
