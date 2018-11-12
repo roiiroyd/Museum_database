@@ -37,4 +37,5 @@ $router->post('/register/save','RegisterController@save');
 
 //EXIBITION
 $router->get('/exibition', 'ExibitionController@index');
+$router->get('/exibition/{id}/delete','ExibitionController@delete');
 

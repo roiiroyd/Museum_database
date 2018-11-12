@@ -22,5 +22,15 @@ class ExibitionController extends Controller
         ]);
     }
 
+    public function delete($id)
+    {
+        $del = Exibitions::findOrFail($id);
+        $del->delete();
+        echo "Delete Success!!";
+        echo"<form action=\"/exibition\">
+        <input type=\"submit\" value=\"Go To home\">
+        </form>";
+    }
+
 
 }

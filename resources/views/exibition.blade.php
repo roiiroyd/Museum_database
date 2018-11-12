@@ -53,6 +53,7 @@
     <th>{{$post->name}}</th>
     <th>{{$post->startDate}}</th> 
     <th>{{$post->endDate}}</th>
+    <td><center><a href="/exibition/{{$post->exibitionID}}/delete">DELETE</a></center></td>
   </tr>
   @endforeach
 
