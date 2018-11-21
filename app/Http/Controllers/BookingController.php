@@ -9,14 +9,15 @@ use Illuminate\http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-class ExibitionController extends Controller
+class BookingController extends Controller
 {
+
     public function index()
     {
         $posts = Exibitions::all();
         $count = $posts->count();
 
-        return view('exibition', [
+        return view('booking', [
           'count' => $count,
           'posts' => $posts
         ]);
@@ -27,21 +28,11 @@ class ExibitionController extends Controller
         $posts = Exibitions::all();
         $count = $posts->count();
 
-        return view('exibitionLogin', [
+        return view('bookingLogin', [
           'count' => $count,
           'posts' => $posts,
           'reg' => $reg
         ]);
-    }
-
-    public function delete($id)
-    {
-        $del = Exibitions::findOrFail($id);
-        $del->delete();
-        echo "Delete Success!!";
-        echo"<form action=\"/exibition\">
-        <input type=\"submit\" value=\"Go To home\">
-        </form>";
     }
 
     public function booking($id,$reg)
@@ -55,7 +46,7 @@ class ExibitionController extends Controller
         
         $history->save();
 
-        return view('exibitionLogin', [
+        return view('bookingLogin', [
             'reg' => $reg,
             'posts' => $posts
           ]);
@@ -64,7 +55,9 @@ class ExibitionController extends Controller
         // echo"<form action=\"/exibitionLogin\">
         // <input type=\"submit\" value=\"Go\">
         // </form>";
-
-        
     }
+
+
+    
+
 }

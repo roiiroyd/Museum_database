@@ -18,16 +18,16 @@
   <div class="collapse navbar-collapse"id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item ">
-        <a class="nav-link" href="/home">HOME </a>
+        <a class="nav-link" href="/homeLogin/{{$reg}}">HOME </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/exibitionLogin/{{$reg}}">EXHIBITIONS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/artworksLogin/{{$reg}}">ART WORKS</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/exibition"><b>EXHIBITIONS</b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/artworks">ART WORKS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/booking">BOOKING</a>
+        <a class="nav-link" href="/bookingLogin/{{$reg}}"><b>BOOKING</b></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/login">LOGIN</a>
@@ -39,6 +39,7 @@
 <br>
 <br>
 <br>
+
 
 <center>
 <table style="width:50%">
@@ -53,7 +54,7 @@
     <th>{{$post->name}}</th>
     <th>{{$post->startDate}}</th> 
     <th>{{$post->endDate}}</th>
-    <td><center><a href="/exibition/{{$post->exibitionID}}/delete">DELETE</a></center></td>
+    <td><center><a href="/bookingLogin/{{$post->exibitionID}}/{{$reg}}/booking">BOOKING</a></center></td>
   </tr>
   @endforeach
 

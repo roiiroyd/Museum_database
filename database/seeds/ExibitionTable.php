@@ -26,5 +26,31 @@ class ExibitionTable extends Seeder
             'endDate' =>'2018-12-01',
             'numberOfAttend' => '200'
         ]);
+
+        DB::table('exibition')->insert([
+            'exibitionID' => '3',
+            'name' => 'THE COSMIC DANCE OF THE PAINTBRUSH',
+            'startDate' => '2018-12-01',
+            'endDate' =>'2018-12-11',
+            'numberOfAttend' => '20'
+        ]);
+
+        DB::table('exibition')->insert([
+            'exibitionID' => '4',
+            'name' => 'PATANI SEMASA',
+            'startDate' => '2018-11-21',
+            'endDate' =>'2018-12-01',
+            'numberOfAttend' => '40'
+        ]);
+
+        DB::table('exibition')->insert([
+            'exibitionID' => '5',
+            'name' => 'THE SERENITY OF MADNESS',
+            'startDate' => '2018-11-20',
+            'endDate' =>'2018-12-11',
+            'numberOfAttend' => '10'
+        ]);
+
+
     }
 }

@@ -14,13 +14,13 @@ class History extends Migration
     public function up()
     {
         Schema::create('history', function (Blueprint $table) {
-            $table->integer('bookingNo');
+            $table->increments('bookingNo');
             $table->integer('regisNo');
             $table->integer('exibitionID');
             $table->date('bookingDate');
             $table->timestamps();
             
-            $table->primary('bookingNo');
+            // $table->primary('bookingNo');
             $table->foreign('exibitionID')->references('exibitionID')->on('exibition');
             // $table->foreign('regisNo')->references('regisNo')->on('participants');
 

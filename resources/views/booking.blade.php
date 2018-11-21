@@ -28,75 +28,12 @@
         <a class="nav-link" href="/artworks">ART WORKS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">BOOKING</a>
+        <a class="nav-link" href="/booking"><b>BOOKING</b></a>
       </li>
-			<li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="/login">LOGIN</a>
       </li>
     </ul>
     </div>
   </div>
 </nav>
-		<br>
-		<br>
-		<br>
-		<br>
-        <div class="page-header ">
-<center>
-<h2>Register</h2>
-</center>
-</div>
-
-  <br>
-  <br>
- <center> 
-	<form action='/register/save' method="post">
-    {{ csrf_field() }}
-	<table style="width:30%"class="table table-striped">
-
-    <!-- <tr>
-			<td style="width:40%">ID : </td>
-			<td><input class="form-control" type="text" name="id" width="500" placeholder="ID" required></td>
-		</tr> -->
-    
-		<tr>
-			<td style="width:40%">Name : </td>
-			<td><input class="form-control" type="text" name="name" width="500" placeholder="NAME" required></td>
-		</tr>
-		<tr>
-			<td>Lastname : </td>
-			<td><input class="form-control" type="text" name="lastname" placeholder="LASTNAME"></td>
-		</tr>
-		<tr>
-			<td>E-mail : </td>
-			<td><input class="form-control" type="text" name="email" placeholder="E-MAIL"></td>
-		</tr>
-		<tr>
-			<td>Password : </td>
-			<td><input class="form-control" type="password" name="password" placeholder="PASSWORD"></td>
-		</tr>
-		<!-- <tr>
-			<td>Confirm Password : </td>
-			<td><input class="form-control" type="password" name="" placeholder=""></td>
-		</tr> -->
-	</table>	
-  
-  <center>
-  <table>
-    
-	 <input class="btn" style="background-color:#2DB74D" type="submit" name="submit" value="Submit">
-  </form>  
-
-  <form action="/register">
-    <input style="margin-left:2%;background-color:#bbb" class="btn" type="submit" value="Back">
-  </form>
-
-  </table>
-  </center>
-  </form>
-
-
-</center>
-
-	</body>
-</html>

@@ -25,10 +25,10 @@
         <a class="nav-link" href="/exibition">EXHIBITIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ART WORKS</a>
+        <a class="nav-link" href="/artworks">ART WORKS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">BOOKING</a>
+        <a class="nav-link" href="/booking">BOOKING</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/login"><b>LOGIN</b></a>
@@ -60,7 +60,7 @@
 					</tr>
 					<tr>
 						<td>Password</td>
-						<td><input type="password" name="pwd" required /></td>
+						<td><input type="password" name="password" required /></td>
 					</tr>
 					</table><br/>
 					

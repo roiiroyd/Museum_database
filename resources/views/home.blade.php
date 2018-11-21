@@ -24,7 +24,7 @@
         <a class="nav-link" href="/exibition">EXHIBITIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ART WORKS</a>
+        <a class="nav-link" href="/artworks">ART WORKS</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">BOOKING</a>

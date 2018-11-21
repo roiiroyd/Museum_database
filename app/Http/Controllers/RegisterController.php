@@ -14,7 +14,7 @@ class RegisterController extends Controller
     {   
         $participants = new participants ;
         $participants->regisNo=$request->input('id');
-        $participants->name=$request->input('name');
+        $participants->name=$request->input('name'); 
         $participants->lastname=$request->input('lastname');
         $participants->email=$request->input('email');
         $participants->password=$request->input('password');
