@@ -22,9 +22,6 @@ class Participants extends Migration
             $table->timestamps();
 
             // $table->primary('regisNo');
-
-            
-
         });
     }
 

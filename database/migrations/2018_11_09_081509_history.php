@@ -16,12 +16,12 @@ class History extends Migration
         Schema::create('history', function (Blueprint $table) {
             $table->increments('bookingNo');
             $table->integer('regisNo');
-            $table->integer('exibitionID');
+            $table->integer('exhibitionID');
             $table->date('bookingDate');
             $table->timestamps();
             
             // $table->primary('bookingNo');
-            $table->foreign('exibitionID')->references('exibitionID')->on('exibition');
+            $table->foreign('exhibitionID')->references('exhibitionID')->on('exhibition');
             // $table->foreign('regisNo')->references('regisNo')->on('participants');
 
         });

@@ -21,7 +21,7 @@
         <a class="nav-link" href="/homeLogin/{{$reg}}"><b>HOME</b> </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/exibitionLogin/{{$reg}}">EXHIBITIONS</a>
+        <a class="nav-link" href="/exhibitionLogin/{{$reg}}">EXHIBITIONS</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/artworksLogin/{{$reg}}">ART WORKS</a>
@@ -30,7 +30,7 @@
         <a class="nav-link" href="/bookingLogin/{{$reg}}">BOOKING</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/login">LOGIN</a>
+        <a class="nav-link" href="/home">LOGOUT</a>
       </li>
     </ul>
     </div>

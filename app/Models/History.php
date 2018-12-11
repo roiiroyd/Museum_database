@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class History extends Model
 {
-    // protected $table = 'history';
+    protected $table = 'history';
     protected $primaryKey = 'bookingNo';
     public $incrementing = false;
     

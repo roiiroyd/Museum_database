@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         $this->call('ArtistTable');
         $this->call('ArtObjectTable');
         $this->call('BorrowedCollTable');
-        $this->call('ExibitionTable');
+        $this->call('ExhibitionTable');
         $this->call('HistoryTable');
         $this->call('ParticipationTable');
         $this->call('PermanentCollTable');

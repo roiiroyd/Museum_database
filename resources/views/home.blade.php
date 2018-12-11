@@ -18,16 +18,13 @@
   <div class="collapse navbar-collapse"id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="/"><b>HOME</b> </a>
+        <a class="nav-link" href="/"><b>HOME</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/exibition">EXHIBITIONS</a>
+        <a class="nav-link" href="/exhibition">EXHIBITIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/artworks">ART WORKS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">BOOKING</a>
+        <a class="nav-link" href="/artworkPaint">ART WORKS</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/login">LOGIN</a>

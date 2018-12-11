@@ -21,7 +21,7 @@ class ArtistTable extends Migration
             $table->string('countryOfOrigin');
             $table->string('epoch');
             $table->string('mainStyle');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->timestamps();
 
             $table->primary('artistID');

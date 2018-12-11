@@ -21,7 +21,7 @@
         <a class="nav-link" href="/homeLogin/{{$reg}}">HOME </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/exibitionLogin/{{$reg}}">EXHIBITIONS</a>
+        <a class="nav-link" href="/exhibitionLogin/{{$reg}}">EXHIBITIONS</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/artworksLogin/{{$reg}}">ART WORKS</a>
@@ -30,7 +30,7 @@
         <a class="nav-link" href="/bookingLogin/{{$reg}}"><b>BOOKING</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/login">LOGIN</a>
+        <a class="nav-link" href="/home">LOGOUT</a>
       </li>
     </ul>
     </div>
@@ -54,9 +54,12 @@
     <th>{{$post->name}}</th>
     <th>{{$post->startDate}}</th> 
     <th>{{$post->endDate}}</th>
-    <td><center><a href="/bookingLogin/{{$post->exibitionID}}/{{$reg}}/booking">BOOKING</a></center></td>
+    <td><center><a href="/bookingLogin/{{$post->exhibitionID}}/{{$reg}}/booking">BOOKING</a></center></td>
   </tr>
   @endforeach
+
+
+  
 
 </table>
 </center>

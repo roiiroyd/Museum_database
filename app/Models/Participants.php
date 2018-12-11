@@ -13,8 +13,8 @@ class Participants extends Model
         return $this->hasMany('App\Models\History');
     }
     
-    public function exibition()
+    public function exhibition()
     {
-        return $this->belongsToMany('App\Models\Exibition');
+        return $this->belongsToMany('App\Models\Exhibition');
     }
 }

@@ -19,10 +19,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/home/{{$reg}}', function () {
-    return view('homeLogin');
-});
-
 Route::get('/login', function () {
     return view('login');
 });
@@ -31,12 +27,12 @@ Route::get('/regis', function () {
     return view('register');
 });
 
-Route::get('/exibition', function () {
-    return view('exibition');
+Route::get('/exhibition', function () {
+    return view('exhibition');
 });
 
-Route::get('/exibitionLogin', function () {
-    return view('exibitionLogin');
+Route::get('/exhibitionLogin', function () {
+    return view('exhibitionLogin');
 });
 
 Route::get('/artworks', function () {
@@ -55,6 +51,11 @@ Route::get('/bookingLogin/{{$reg}}', function () {
     return view('bookingLogin');
 });
 
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+
 
 
 
@@ -63,15 +64,20 @@ Route::get('/bookingLogin/{{$reg}}', function () {
 $router->post('/register/save','RegisterController@save');
 
 //EXIBITION
-$router->get('/exibition', 'ExibitionController@index');
-$router->get('/exibition/{id}/delete','ExibitionController@delete');
-$router->get('/exibitionLogin/{reg}', 'ExibitionController@indexLogin');
-$router->get('/exibitionLogin/{id}/{reg}/booking', 'ExibitionController@booking');
+$router->get('/exhibition', 'ExhibitionController@index');
+$router->get('/exhibition/{id}/delete','ExhibitionController@delete');
+$router->get('/exhibition/{id}/view','ExhibitionController@view');
+$router->get('/exhibitionLogin/{id}/delete','ExhibitionController@delete');
+$router->get('/exhibitionLogin/{reg}', 'ExhibitionController@indexLogin');
+$router->get('/exhibitionLogin/{id}/view','ExhibitionController@view');
+$router->get('/exhibitionLogin/{id}/{reg}/booking', 'ExhibitionController@booking');
 
 
 //BOOKING
 $router->get('/booking', 'BookingController@index');
 $router->get('/booking/{reg}', 'BookingController@booking');
+$router->get('/booking/{id}/login', 'LoginController@showLoginBooking');
+$router->post('/booking/{id}/checkLogin', 'LoginController@loginToBooking');
 $router->get('/bookingLogin/{reg}', 'BookingController@indexLogin');
 $router->get('/bookingLogin/{id}/{reg}/booking', 'BookingController@booking');
 
@@ -80,7 +86,13 @@ $router->get('/login', 'LoginController@setlogin');
 $router->post('/login/save','LoginController@loginresult');
 
 //HOMELOGIN
+$router->get('/homeLogin/{reg}', 'LoginController@show');
+
 
 //ARTWORKS
-$router->get('/artworks', 'ExibitionController@index');
-$router->get('/artworksLogin/{reg}', 'ArtworksController@indexLogin');
+$router->get('/artworks', 'ArtworksController@showIndex');
+$router->get('/artworkPaint', 'ArtworksController@showIndexPaint');
+$router->get('/artworkSculpture', 'ArtworksController@showIndexSculpture');
+$router->get('/artworkStatue', 'ArtworksController@showIndexStatue');
+$router->get('/artworkOther', 'ArtworksController@showIndexOther');
+$router->get('/artworksLogin/{reg}', 'ArtworksController@show');

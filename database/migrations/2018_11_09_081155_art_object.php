@@ -21,11 +21,11 @@ class ArtObject extends Migration
             $table->string('year',4);
             $table->string('paintType')->nullable();
             $table->string('material')->nullable();
-            $table->integer('height')->nullable();
-            $table->integer('weight')->nullable();
+            $table->string('height')->nullable();
+            $table->string('weight')->nullable();
             $table->string('style')->nullable();
-            $table->integer('exibitionID')->nullable();
-            $table->string('description')->nullable();
+            $table->integer('exhibitionID')->nullable();
+            $table->string('description',200)->nullable();
             $table->timestamps();
 
             $table->primary('artID');

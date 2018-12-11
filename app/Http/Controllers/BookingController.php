@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\participants;
-use App\Models\Exibitions;
+use App\Models\Exhibitions;
 use App\Models\history;
 use Illuminate\http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -14,7 +14,7 @@ class BookingController extends Controller
 
     public function index()
     {
-        $posts = Exibitions::all();
+        $posts = Exhibitions::all();
         $count = $posts->count();
 
         return view('booking', [
@@ -25,7 +25,7 @@ class BookingController extends Controller
 
     public function indexLogin($reg)
     {
-        $posts = Exibitions::all();
+        $posts = Exhibitions::all();
         $count = $posts->count();
 
         return view('bookingLogin', [
@@ -37,16 +37,29 @@ class BookingController extends Controller
 
     public function booking($id,$reg)
     {
-        $posts = Exibitions::all();
+        $posts = Exhibitions::All();
+        $ex = Exhibitions::where('exhibitionID','=',$id)->first();
+        $limitAtten = $ex->limitOfAttend;
+        $numberAtten = $ex->numberOfAttend;
+        $dateEx = $ex->startDate;
 
-        $history = new history;
-        $history->exibitionID=$id;
-        $history->regisNo=$reg;
-        $history->bookingDate='2018-12-01';
-        
-        $history->save();
+        if($numberAtten < $limitAtten){
+            $ex->numberOfAttend = $numberAtten + 1;
+            $history = new history;
+            $history->exhibitionID=$id;
+            $history->regisNo=$reg;
+            $history->bookingDate=$dateEx;
+            $history->save();
+            $ex->save();
+            echo"success";
+            
+        }else{
+
+            echo"fail";
+        }
 
         return view('bookingLogin', [
+            
             'reg' => $reg,
             'posts' => $posts
           ]);

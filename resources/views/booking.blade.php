@@ -22,14 +22,12 @@
         <a class="nav-link" href="/home">HOME </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/exibition">EXHIBITIONS</a>
+        <a class="nav-link" href="/exhibition">EXHIBITIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/artworks">ART WORKS</a>
+        <a class="nav-link" href="/artworkPaint">ART WORKS</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/booking"><b>BOOKING</b></a>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="/login">LOGIN</a>
       </li>

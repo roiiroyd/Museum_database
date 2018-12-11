@@ -13,9 +13,25 @@ class ParticipationTable extends Seeder
     {
         DB::table('participants')->insert([
             'regisNo' => '1',
-            'name' => 'roy',
-            'lastname' => 'bura',
-            'email' =>'roybura',
+            'name' => 'abc',
+            'lastname' => 'zxc',
+            'email' =>'1234@gmail.com',
+            'password' => '1234'
+        ]);
+
+        DB::table('participants')->insert([
+            'regisNo' => '2',
+            'name' => 'hello',
+            'lastname' => 'morning',
+            'email' =>'morning@gmail.com',
+            'password' => '1234'
+        ]);
+
+        DB::table('participants')->insert([
+            'regisNo' => '3',
+            'name' => 'monday',
+            'lastname' => 'morning',
+            'email' =>'morning@gmail.com',
             'password' => '1234'
         ]);
     }
