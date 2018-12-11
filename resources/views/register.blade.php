@@ -84,7 +84,7 @@
 	 <input class="btn" style="background-color:#2DB74D" type="submit" name="submit" value="Submit">
   </form>  
 
-  <form action="/register">
+  <form action="/home">
     <input style="margin-left:2%;background-color:#bbb" class="btn" type="submit" value="Back">
   </form>
 

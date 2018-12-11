@@ -39,7 +39,6 @@ class LoginController extends Controller
         if(admin::where('email','=',$email)->value('password')==$pwd){
                     
             $admin = admin::where('email','=',$email)->first();
-                 
             return view('admin',['title' => 'admin', 
             
             ]);
@@ -64,7 +63,7 @@ class LoginController extends Controller
             }
             else {
                     echo "Fail";
-                    return view('login',['title' => 'login']);
+                    return view('login',['title' => 'fail to login']);
                 }
             }
         }

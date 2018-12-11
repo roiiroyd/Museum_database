@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<title>Home</title>
@@ -17,14 +18,14 @@
   <div style="padding-left:50%" >
   <div class="collapse navbar-collapse"id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="/homeLogin/{{$reg}}"><b>HOME</b> </a>
+      <li class="nav-item ">
+        <a class="nav-link" href="/homeLogin/{{$reg}}">HOME </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/exhibitionLogin/{{$reg}}">EXHIBITIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/artworkPaintLogin/{{$reg}}">ART WORKS</a>
+        <a class="nav-link" href="/artworkOtherLogin/{{$reg}}"><b>ART WORKS</b></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/bookingLogin/{{$reg}}">BOOKING</a>
@@ -36,3 +37,33 @@
     </div>
   </div>
 </nav>
+
+<br>
+<br>
+<div class="row">
+    <div class="col-3">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a href="/artworkPaintLogin/{{$reg}}">PAINTING</a>
+        <a href="/artworkSculptureLogin/{{$reg}}">SCULPTURE</a>
+        <a href="/artworkStatueLogin/{{$reg}}">STATUE</a>
+        <a href="/artworkOtherLogin/{{$reg}}">OTHER</a>
+      </div>
+    </div>
+    <div class="col-6"> 
+        <div class="mx-auto">
+            <div>
+                <div>
+                    @foreach ($posts as $post)
+                      <tr>
+                      <br>
+                      <th>{{$post->title}}</th>
+                      <th>{{$post->year}}</th> 
+                      <th>{{$post->paintType}}</th>
+                      </tr>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

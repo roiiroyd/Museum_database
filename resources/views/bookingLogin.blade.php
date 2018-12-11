@@ -24,7 +24,7 @@
         <a class="nav-link" href="/exhibitionLogin/{{$reg}}">EXHIBITIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/artworksLogin/{{$reg}}">ART WORKS</a>
+        <a class="nav-link" href="/artworkPaintLogin/{{$reg}}">ART WORKS</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/bookingLogin/{{$reg}}"><b>BOOKING</b></a>

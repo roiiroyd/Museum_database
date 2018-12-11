@@ -69,8 +69,8 @@ $router->get('/exhibition/{id}/delete','ExhibitionController@delete');
 $router->get('/exhibition/{id}/view','ExhibitionController@view');
 $router->get('/exhibitionLogin/{id}/delete','ExhibitionController@delete');
 $router->get('/exhibitionLogin/{reg}', 'ExhibitionController@indexLogin');
-$router->get('/exhibitionLogin/{id}/view','ExhibitionController@view');
 $router->get('/exhibitionLogin/{id}/{reg}/booking', 'ExhibitionController@booking');
+$router->get('/exhibitionDetailLogin/{id}/{reg}/view','ExhibitionController@viewLogin');
 
 
 //BOOKING
@@ -90,9 +90,11 @@ $router->get('/homeLogin/{reg}', 'LoginController@show');
 
 
 //ARTWORKS
-$router->get('/artworks', 'ArtworksController@showIndex');
 $router->get('/artworkPaint', 'ArtworksController@showIndexPaint');
 $router->get('/artworkSculpture', 'ArtworksController@showIndexSculpture');
 $router->get('/artworkStatue', 'ArtworksController@showIndexStatue');
 $router->get('/artworkOther', 'ArtworksController@showIndexOther');
-$router->get('/artworksLogin/{reg}', 'ArtworksController@show');
+$router->get('/artworkPaintLogin/{reg}', 'ArtworksController@showIndexPaintLogin');
+$router->get('/artworkSculptureLogin/{reg}', 'ArtworksController@showIndexSculptureLogin');
+$router->get('/artworkStatueLogin/{reg}', 'ArtworksController@showIndexStatueLogin');
+$router->get('/artworkOtherLogin/{reg}', 'ArtworksController@showIndexOtherLogin');

@@ -17,22 +17,47 @@
   <div style="padding-left:50%" >
   <div class="collapse navbar-collapse"id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="/homeLogin/{{$reg}}"><b>HOME</b> </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/exhibitionLogin/{{$reg}}">EXHIBITIONS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/artworkPaintLogin/{{$reg}}">ART WORKS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/bookingLogin/{{$reg}}">BOOKING</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/home">LOGOUT</a>
+      <li class="nav-item ">
+        <a class="nav-link" href="/homeLogin/{{$reg}}">HOME </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/exhibitionLogin/{{$reg}}">EXHIBITIONS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/artworkPaintLogin/{{$reg}}">ART WORKS</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/bookingLogin/{{$reg}}"><b>BOOKING</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/home">LOGOUT</a>
       </li>
     </ul>
     </div>
   </div>
 </nav>
+<br>
+<br>
+<br>
+
+
+<center>
+
+  <tr>
+  {{$name}}
+  </tr>
+  <br>
+  <div style="padding:10%" >
+
+  <td>
+  {{$detail}}
+  </td>
+  <br>
+  <td><center><a href="/exhibitionLogin/{{$id}}/{{$reg}}/booking">BOOKING</a></center></td>
+
+  </div>
+  
+
+
+
+</center>

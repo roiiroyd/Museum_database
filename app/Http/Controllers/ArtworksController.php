@@ -17,35 +17,6 @@ class ArtworksController extends Controller
         ]);
     }
 
-    public function showIndex()
-    {
-        
-        $posts = ArtObject::All();
-        $postPaints = ArtObject::where('type',1)->get();
-        $postSculps = ArtObject::where('type',2)->get();
-        $postStatues = ArtObject::where('type',3)->get();
-        $postOthers = ArtObject::where('type',4)->get();
-
-        $count = $posts->count();
-
-        // $title = $posts->title;
-        // $year = $posts->year;
-        // $paintType = $posts->paintType;
-
-        return view('artworks', [
-            'count' => $count,
-            'postPs' => $postPaints,
-            'postSCs' => $postSculps,
-            'postSs' => $postStatues,
-            'postOs' => $postOthers
-            // 'title' => $title,
-            // 'year' => $year,
-            // 'paintType' => $paintType
-        ]);
-
-    }
-
-
     public function showIndexPaint()
     {
         $postPaints = ArtObject::where('type',1)->get();
@@ -54,6 +25,18 @@ class ArtworksController extends Controller
         return view('artworkPaint', [
             'count' => $count,
             'posts' => $postPaints
+        ]);
+    }
+
+    public function showIndexPaintLogin($reg)
+    {
+        $postPaints = ArtObject::where('type',1)->get();
+        $count = $postPaints->count();
+
+        return view('artworkPaintLogin', [
+            'count' => $count,
+            'posts' => $postPaints,
+            'reg' => $reg
         ]);
     }
 
@@ -68,6 +51,18 @@ class ArtworksController extends Controller
         ]);
     }
 
+    public function showIndexSculptureLogin($reg)
+    {
+        $postSculps = ArtObject::where('type',2)->get();
+        $count = $postSculps->count();
+
+        return view('artworkSculptureLogin', [
+            'count' => $count,
+            'posts' => $postSculps,
+            'reg' => $reg
+        ]);
+    }
+
     public function showIndexStatue()
     {
         $postStatue = ArtObject::where('type',3)->get();
@@ -76,6 +71,18 @@ class ArtworksController extends Controller
         return view('artworkStatue', [
             'count' => $count,
             'posts' => $postStatue
+        ]);
+    }
+
+    public function showIndexStatueLogin($reg)
+    {
+        $postStatue = ArtObject::where('type',3)->get();
+        $count = $postStatue->count();
+
+        return view('artworkStatueLogin', [
+            'count' => $count,
+            'posts' => $postStatue,
+            'reg' => $reg
         ]);
     }
 
@@ -89,6 +96,19 @@ class ArtworksController extends Controller
             'posts' => $postOther
         ]);
     }
+
+    public function showIndexOtherLogin($reg)
+    {
+        $postOther = ArtObject::where('type',4)->get();
+        $count = $postOther->count();
+
+        return view('artworkOtherLogin', [
+            'count' => $count,
+            'posts' => $postOther,
+            'reg' => $reg
+        ]);
+    }
+
 
 
 

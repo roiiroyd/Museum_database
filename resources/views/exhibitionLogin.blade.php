@@ -24,7 +24,7 @@
         <a class="nav-link" href="/exhibitionLogin/{{$reg}}"><b>EXHIBITIONS</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/artworksLogin/{{$reg}}">ART WORKS</a>
+        <a class="nav-link" href="/artworkPaintLogin/{{$reg}}">ART WORKS</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/bookingLogin/{{$reg}}">BOOKING</a>
@@ -43,6 +43,7 @@
 <center>
 <table style="width:50%">
   <tr>
+   
     <th>EXHIBITION NAME</th>
     <th>DATE</th> 
     <th>ENTER</th>
@@ -50,10 +51,11 @@
 
   @foreach ($posts as $post)
   <tr>
+    
     <th>{{$post->name}}</th>
     <th>{{$post->startDate}}</th> 
     <th>{{$post->endDate}}</th>
-    <td><center><a href="/exibitionLogin/{{$post->exibitionID}}/view">VIEW DETAIL</a></center></td>
+    <td><center><a href="/exhibitionDetailLogin/{{$post->exhibitionID}}/{{$reg}}/view">VIEW DETAIL</a></center></td>
   </tr>
   @endforeach
 

@@ -28,10 +28,9 @@ class RegisterController extends Controller
         else{
 
             $participants->save(); 
-            echo "<br><br><center>Adding Success!";
-//
-            echo"<form action=\"/officers\">
-        <input type=\"submit\" value=\"Go To Officer\">
+            echo "<br><br><center>You are member now";
+            echo"<form action=\"/login\">
+        <input type=\"submit\" value=\"GO TO LOGIN\">
         </form>";
         }
         

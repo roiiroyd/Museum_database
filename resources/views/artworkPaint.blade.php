@@ -39,31 +39,30 @@
 <br>
 <br>
   <div class="row">
-  <div class="col-3">
-    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a href="/artworkPaint">PAINTING</a>
-      <a href="/artworkSculpture">SCULPTURE</a>
-      <a href="/artworkStatue">STATUE</a>
-      <a href="/artworkOther">OTHER</a>
-      </div>
-  </div>
-  <div class="col-6"> 
-      <div class="mx-auto">
-          <div>
-                <div>
-                  @foreach ($posts as $post)
-                    <tr>
-                    <br>
-                    <th>{{$post->title}}</th>
-                    <th>{{$post->year}}</th> 
-                    <th>{{$post->paintType}}</th>
-                    </tr>
-                  @endforeach
-                </div>
-          </div>
-      </div>
-    
+    <div class="col-3">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a href="/artworkPaint">PAINTING</a>
+        <a href="/artworkSculpture">SCULPTURE</a>
+        <a href="/artworkStatue">STATUE</a>
+        <a href="/artworkOther">OTHER</a>
       </div>
     </div>
+    <div class="col-6"> 
+        <div class="mx-auto">
+            <div>
+                <div>
+                    @foreach ($posts as $post)
+                      <tr>
+                      <br>
+                      <th>{{$post->title}}</th>
+                      <th>{{$post->year}}</th> 
+                      <th>{{$post->paintType}}</th>
+                      </tr>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
+</div>
 </div>

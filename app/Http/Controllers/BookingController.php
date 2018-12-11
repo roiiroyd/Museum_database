@@ -45,17 +45,21 @@ class BookingController extends Controller
 
         if($numberAtten < $limitAtten){
             $ex->numberOfAttend = $numberAtten + 1;
+            
             $history = new history;
             $history->exhibitionID=$id;
             $history->regisNo=$reg;
             $history->bookingDate=$dateEx;
             $history->save();
             $ex->save();
-            echo"success";
             
+            $message = "booking success";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }else{
-
-            echo"fail";
+            $message = "booking failed full of attendance";
+            echo "<form action=\"/bookingLogin\">
+            <script type='text/javascript'>alert('$message');</script>
+            </form>";
         }
 
         return view('bookingLogin', [

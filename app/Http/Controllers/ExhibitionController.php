@@ -26,7 +26,7 @@ class ExhibitionController extends Controller
     {
         $posts = Exhibitions::all();
         $count = $posts->count();
-
+        
         return view('exhibitionLogin', [
           'count' => $count,
           'posts' => $posts,
@@ -60,20 +60,55 @@ class ExhibitionController extends Controller
         
     }
 
+    public function viewLogin($id,$reg)
+    {
+        $ex = Exhibitions::where('exhibitionID','=',$id)->first();
+        $names = $ex->name;
+        $detail = $ex->detail;
+
+        return view('exhibitionDetailLogin', [
+            'name' => $names,
+            'detail' => $detail,
+            'id' => $id,
+            'reg' => $reg
+          ]);
+        
+    }
+
     public function booking($id,$reg)
     {
-        $posts = Exhibitions::all();
-        $history = new history;
+        $ex = Exhibitions::where('exhibitionID','=',$id)->first();
+        $limitAtten = $ex->limitOfAttend;
+        $numberAtten = $ex->numberOfAttend;
+        $dateEx = $ex->startDate;
+        $names = $ex->name;
+        $detail = $ex->detail;
         
-        $history->exhibitionID=$id;
-        $history->regisNo=$reg;
-        $history->bookingDate='2018-12-01';
+        if($numberAtten < $limitAtten){
+            $ex->numberOfAttend = $numberAtten + 1;
+            
+            $history = new history;
+            $history->exhibitionID=$id;
+            $history->regisNo=$reg;
+            $history->bookingDate=$dateEx;
+            $history->save();
+            $ex->save();
+            
+            $message = "booking success";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }else{
+            $message = "booking failed full of attendance";
+            echo "<form action=\"/exhibitionDetailLogin\">
+            <script type='text/javascript'>alert('$message');</script>
+            </form>";
+        }
         
-        $history->save();
-
-        return view('exhibitionLogin', [
+        return view('exhibitionDetailLogin', [
+            'name' => $names,
+            'detail' => $detail,
             'reg' => $reg,
-            'posts' => $posts
+            'posts' => $ex,
+            'id' => $id
           ]);
 
     }
