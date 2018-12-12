@@ -10,8 +10,18 @@ use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
+    public function homeLogin($reg){
+        return view('homeLogin', [
+            'reg' => $reg
+          ]);
+    }
+
     public function save(Request $request)
     {   
+        
+    
+
+
         $participants = new participants ;
         $participants->regisNo=$request->input('id');
         $participants->name=$request->input('name'); 
@@ -32,7 +42,6 @@ class RegisterController extends Controller
             echo"<form action=\"/login\">
         <input type=\"submit\" value=\"GO TO LOGIN\">
         </form>";
-        }
-        
+        } 
     }
 }

@@ -11,7 +11,7 @@
 	</head>
 	<body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a style="padding-left:5%"class="navbar-brand" href="#">Art Museum</a>
+  <a style="padding-left:5%"class="navbar-brand" href="/home/{{$reg}}">Art Museum</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -24,7 +24,7 @@
       <li class="nav-item">
         <a class="nav-link" href="/exhibitionLogin/{{$reg}}">EXHIBITIONS</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="/artworkOtherLogin/{{$reg}}"><b>ART WORKS</b></a>
       </li>
       <li class="nav-item">

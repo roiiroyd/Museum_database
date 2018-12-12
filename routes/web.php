@@ -58,7 +58,8 @@ Route::get('/admin', function () {
 
 
 
-
+//HOME
+$router->get('/home/{reg}','RegisterController@homeLogin');
 
 //REGISTER
 $router->post('/register/save','RegisterController@save');
